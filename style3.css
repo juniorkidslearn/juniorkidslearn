@@ -1,0 +1,245 @@
+/* Faculty Highlight Section */
+.faculty-highlight-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faculty-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00FF00;
+}
+
+.faculty-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.faculty-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.faculty-title {
+    font-size: 1.1em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.faculty-experience {
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.secondary-button {
+    background-color: #FFD700;
+    color: #333333;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: orange;
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    color: #333333;
+    font-size: 0.95em;
+}
+
+/* Events & Announcements Carousel */
+.events-announcements-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.event-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.small-button {
+    background-color: #00FF00;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.small-button:hover {
+    background-color: orange;
+}
+
+/* Quick Links Section */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.quick-link-button {
+    background-color: #90EE90;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    transition: transform 0.5s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-link-button:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: pink;
+    color: purple;
+}
+
+.quick-link-button span, .quick-link-button img {
+    transition: all 0.3s ease;
+}
+
+.quick-link-button::after {
+    content: 'click here';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.quick-link-button:hover span, .quick-link-button:hover img {
+    opacity: 0;
+}
+
+.quick-link-button:hover::after {
+    opacity: 1;
+}
+
+.quick-link-button img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.quick-link-button span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-snapshot-content {
+        flex-direction: column;
+    }
+
+    .about-text, .quick-stats-grid {
+        max-width: 100%;
+    }
+
+    .faculty-highlight-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faculty-info {
+        min-width: unset;
+        text-align: center;
+    }
+
+    .faculty-photo {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-grid, .courses-grid, .quick-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-item {
+        max-width: 100%;
+    }
+}
+

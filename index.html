@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Kids Learn</title>
+    <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style5.css">
+    <!-- Link to Google Fonts for Poppins and Open Sans -->
+    
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    
+    
+
+    <!-- Header Section (Sticky Navigation) -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Junior Kids Learn.png" alt="Junior Kids Learn Logo">
+                    <span>Junior Kids Learn</span>
+                </a>
+            </div>
+            <div class="mobile-notification-icon-container">
+                <a href="notices.html" id="notification-link-mobile" class="nav-button">
+                    <img src="icons/notification-icon.png" alt="Notification Icon" class="notification-icon">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-us-section">About Us</a></li>
+                    <li><a href="#our-courses-section">Courses</a></li>
+                    <li><a href="#faculty-section">Faculty</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1Gzajk1ekLq_JubyYhoUBBOJBAjwvU3lz?usp=sharing">Resources</a></li>
+                    <li><a href="/Why_us" class="main-why-us-link">Why us</a></li>
+                    <li><a href="notices_new.html">Manage Notices</a></li>
+                    <li><a href="#testimonials-section">Review</a></li>
+                    
+                    <li><a href="notices.html" id="notification-link" class="nav-button">
+                        <img src="icons/notification-icon.png" alt="Notification Icon" class="notification-icon">
+                    </a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+        <section class="hero-section" id="hero-section-id">
+        <div class="transparent-layer">
+            
+            <video autoplay muted loop id="hero-video-embedded">
+                <source src="playful-children-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container hero-content">
+            <h1>Junior Kids Learn</h1>
+            <p class="tagline">Perfect Learning Center for Kids</p>
+            <a href="/Why_us" class="button primary-button" data-image="icons/QRCode.png">Pay now</a>
+            <button style="background-color: #90EE90; color: black; animation: shake-whatsapp 0.5s infinite alternate;" onclick="window.open('https://wa.me/8292797309', '_blank');">Share payment screen shot here</button>
+            
+            
+        </div>
+    </section>
+
+    <div id="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background-color: white; padding: 20px; border-radius: 8px; position: relative; max-width: 80%; max-height: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <button id="close-video" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+        <img id="modal-image" src="" alt="Modal Image" style="display: none;">
+        
+        <div style="position: relative; width: 100%;">
+            <video id="why-us-video" width="100%" controls loop>
+                <source src="Why_us.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="shekhar-bro-button" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-60%); background-color: #FF8C00; color: #EEEEEE; border-radius: 30px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: bold; cursor: pointer; z-index: 10; border: none; animation: shake-whatsapp 0.5s infinite alternate;" onclick="window.open('https://www.youtube.com/watch?v=CiQN6tAJ6BQ', '_blank');">Explore now</button>
+        </div>
+        <div id="upi-content-container" style="display: none;">
+            <div id="upi-image-container" style="text-align: center; margin-top: 10px;">
+                <a href="8292797309" target="_blank" rel="noopener noreferrer"><img src="icons/QRCode.png" alt="Pay with UPI ID" style="width: 150px; height: auto;"></a>
+            </div>
+            <p style="margin: 10px 0; font-weight: bold; text-align: center;">OR</p>
+            <div id="upi-button-container" style="text-align: center; margin-top: 10px;">
+                <a href="8292797309" class="button primary-button">Pay using phone number : 8292797309</a>
+            </div>
+        </div>
+        </div>
+</div>
+        
+        </div>
+</div>
+
+    <!-- About Snapshot Section -->
+    <section class="content-section section-light-bg" id="about-us-section">
+        <div class="container">
+            <h2 class="section-title">Welcome to Junior Kids Learn!</h2>
+            <div class="about-snapshot-content">
+                <div class="about-text">
+                    <p>At Junior Kids Learn, we are dedicated to nurturing curiosity, fostering growth, and building strong foundational learning for young minds. Our mission is to provide a warm, engaging, and supportive environment where every child can thrive and discover their full potential.</p>
+                </div>
+                <div class="quick-stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">Playgroup to Class IV</span>
+                        <span class="stat-label">Age Group Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Established 2022</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Mithila Colony</span>
+                        <span class="stat-label">Our Location</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Offered Section -->
+    <section class="content-section section-primary-bg" id="our-courses-section">
+        <div class="container">
+            <h2 class="section-title">Our Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/icon-playgroup.png" alt="Nursery Icon"></div>
+                    <h3 class="card-title">Playgroup</h3>
+                    <p class="card-description">Early sensory development & social skills.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/playgroup.mp4">Learn More</a>
+                    
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/icon-nursery.png" alt="Nursery Icon"></div>
+                    <h3 class="card-title">Nursery</h3>
+                    <p class="card-description">Foundational literacy & numeracy.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/Nursery.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/LKG.png" alt="LKG Icon"></div>
+                    <h3 class="card-title">LKG</h3>
+                    <p class="card-description">Pre-reading & writing skills.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/LKG.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/UKG.png" alt="UKG Icon"></div>
+                    <h3 class="card-title">UKG</h3>
+                    <p class="card-description">Advanced pre-primary concepts.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/UKG.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/Class_I.png" alt="Class I Icon"></div>
+                    <h3 class="card-title">Class I</h3>
+                    <p class="card-description">Core subjects & critical thinking.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/Class_1.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/Class_II.png" alt="Class II Icon"></div>
+                    <h3 class="card-title">Class II</h3>
+                    <p class="card-description">Building on foundational knowledge.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/Class_2.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/Class_III.png" alt="Class III Icon"></div>
+                    <h3 class="card-title">Class III</h3>
+                    <p class="card-description">Deeper understanding & application.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/Class_3.mp4">Learn More</a>
+                </div>
+                <div class="course-card">
+                    <div class="card-icon"><img src="icons/Class_IV.png" alt="Class IV Icon"></div>
+                    <h3 class="card-title">Class IV</h3>
+                    <p class="card-description">Advanced concepts & problem-solving.</p>
+                    <a href="/Why_us" class="card-button" data-video="Videos/Class_4.mp4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Highlight Section -->
+    <section class="content-section section-light-bg" id="faculty-section" style="background-color: #FFE4E1;">
+        <div class="container">
+            <h2 class="section-title">Our Educators</h2>
+            <div class="educators-grid">
+                <div class="faculty-highlight-card">
+                    <img src="icons\kanti.png" alt="Kanti Kumari" class="faculty-photo">
+                    <div class="faculty-info">
+                        <h3>Kanti Kumari</h3>
+                        <p class="faculty-title">Lead Kids Teacher</p>
+                        <p class="faculty-experience">With over 10 years of experience in early childhood education, Kanti Kumari is passionate about creating engaging and effective learning experiences for young children. Her dedication ensures every child receives personalized attention and guidance.</p>
+                    </div>
+                </div>
+                <div class="faculty-highlight-card">
+                    <img src="icons\kundan.png" alt="Kundan Kumar" class="faculty-photo">
+                    <div class="faculty-info">
+                        <h3>Kundan Kumar</h3>
+                        <p class="faculty-title">Lead Educator</p>
+                        <p class="faculty-experience">With more than 10 years of experience in early childhood education, Kundan Kumar fosters a supportive and inspiring classroom environment. His mix of innovation, empathy, and structured teaching encourages curiosity, while his calm and approachable style helps every child develop confidence and a love for learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Testimonials Section -->
+    <section class="content-section section-primary-bg" id="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Parents Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Junior Kids Learn has transformed my child's love for learning. The teachers are incredibly supportive and the environment is so positive!"</p>
+                    <p class="author">- Mrs. Sharma, Parent of Aarav (Class II)</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"My daughter looks forward to going to class every day. The playful approach to education here is truly remarkable."</p>
+                    <p class="author">- Mr. Verma, Parent of Diya (Nursery)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Quick Links Section -->
+    <section class="content-section section-primary-bg">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="quick-links-grid">
+                <a href="#" class="quick-link-button">
+                    <img src="icons/Home.png" alt="Home Icon">
+                    <span>Home</span>
+                </a>
+                <a href="#about-us-section" class="quick-link-button">
+                    <img src="icons/About_Us.png" alt="About Us Icon">
+                    <span>About Us</span>
+                </a>
+                <a href="#our-courses-section" class="quick-link-button">
+                    <img src="icons/Courses.png" alt="Courses Icon">
+                    <span>Courses</span>
+                </a>
+                <a href="#faculty-section" class="quick-link-button">
+                    <img src="icons/Faculty.png" alt="Faculty Icon">
+                    <span>Faculty</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1Gzajk1ekLq_JubyYhoUBBOJBAjwvU3lz?usp=sharing" class="quick-link-button">
+                    <img src="icons/Resources.png" alt="Resources Icon">
+                    <span>Resources</span>
+                </a>
+                <a href="/Why_us" class="quick-link-button">
+                    <img src="icons/Why_us.png" alt="Events Icon">
+                    <span>Why us</span>
+                </a>
+                <a href="#testimonials-section" class="quick-link-button">
+                    <img src="icons/Review.png" alt="Review Icon">
+                    <span>Review</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Junior Kids Learn</h4>
+                <p>Nurturing Young Minds, Building Bright Futures.</p>
+                <div class="social-links">
+                    <a href="https://youtu.be/CiQN6tAJ6BQ?si=EGtMafI4LVMlePew" class="youtube-link">Youtube channel : <img src="icons/YouTube_Logo.png" alt="Youtube channel"></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero-section-id">Home</a></li>
+                    <li><a href="#about-us-section">About Us</a></li>
+                    <li><a href="#our-courses-section">Courses</a></li>
+                    <li><a href="#faculty-section">Faculty</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1Gzajk1ekLq_JubyYhoUBBOJBAjwvU3lz?usp=sharing">Resources</a></li>
+                    <li><a href="/Why_us">Why us</a></li>
+                    <li><a href="notices_new.html">Manage Notices</a></li>
+                    <li><a href="#testimonials-section">Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Mithila Colony, Patna</p>
+                <p>Phone: 8292797309</p>
+                <p>Email:juniorkidslearn@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Junior Kids Learn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+    <script src="notices.js"></script>
+    <a href="https://wa.me/8292797309" target="_blank" rel="noopener noreferrer">
+        <div id="scroll-to-top" title="Click here to whatsapp me">
+            <img src="whatsapp.png" alt="WhatsApp Logo" style="width: 50px; height: 50px;">
+        </div>
+    </a>
+</body>
+</html>

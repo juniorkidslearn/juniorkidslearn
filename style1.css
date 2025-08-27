@@ -1,0 +1,1000 @@
+/* General Body and Container */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding-top: 80px;
+    box-sizing: border-box;
+    color: #333333;
+    background-color: #ffffff; /* White background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #ffffff; /* White background for header */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    position: fixed; /* Makes header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header stays on top */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+/* Main Navigation Styling */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+    padding: 5px 0; /* Add padding for hover area */
+}
+
+.main-nav ul li a:hover {
+    color: #00FF00; /* Energetic green on hover */
+}
+
+/* Navigation Button (e.g., Admissions) */
+.main-nav ul li .nav-button {
+    background-color: #90EE90; /* Light green for button */
+    color: #333333;
+    padding: 20px;
+    border-radius: 15px; /* Rounded button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Added for absolute positioning of notification count */
+    overflow: hidden;
+}
+
+.main-nav ul li .nav-button img {
+    width: 40px; /* Adjust logo size */
+    height: 40px;
+    margin-bottom: 10px;
+    animation: shake-whatsapp 0.5s infinite alternate; /* Apply the animation */
+}
+
+.main-nav ul li .nav-button .notification-count {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.7em; /* Adjusted font size for smaller circle */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 4px; /* Adjusted padding for circular shape */
+    position: absolute;
+    top: 0; /* Positioned at the top edge */
+    right: 0; /* Positioned at the right edge */
+    min-width: 15px; /* Ensure minimum width for single digits */
+    height: 15px; /* Ensure minimum height for single digits */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%); /* Adjust for perfect centering on the corner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Small shadow for pop-out effect */
+    z-index: 1; /* Ensure it's above the icon */
+}
+
+.main-nav ul li .nav-button:hover {
+    background-color: #CC4444; /* Slightly darker red on hover */
+    transform: translateY(-2px);
+    color: #ffffff; /* Keep text white on hover */
+}
+
+/* Mobile Menu Toggle (Hidden on Desktop) */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Hide main nav by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Below header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+        transition: all 0.3s ease-in-out; /* Smooth transition for mobile menu */
+        z-index: 10; /* Ensure navigation is above video */
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li .nav-button {
+        margin-left: 0; /* Remove left margin for mobile button */
+        width: 80%; /* Make button wider */
+        margin: 10px auto; /* Center button */
+    }
+
+        header .menu-toggle {
+        display: block !important; /* Show toggle button on small screens */
+    }
+}
+
+/* Basic Section Styling */
+.content-section {
+    padding: 60px 0;
+}
+
+.section-light-bg {
+    background-color: #ffffff; /* Changed for contrast */
+}
+
+.section-primary-bg {
+    background-color: #fffacd; /* Light yellow for contrast */
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between items */
+}
+
+.section-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hero Section Specifics */
+.hero-section {
+    position: relative; /* Needed for absolute positioning of video */
+    overflow: hidden; /* Hide video overflow */
+    background-color: #f0f8ff; /* Fallback background color */
+    padding: 100px 0;
+    text-align: center;
+    display: flex; /* Use flexbox for content centering */
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Minimum height for hero section */
+}
+
+.transparent-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex; /* Use flexbox to center the video */
+    align-items: center;
+    justify-content: center;
+    z-index: 0; /* Below hero-content */
+    overflow: hidden; /* Hide video overflow */
+}
+
+#hero-video-embedded {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Cover the entire area of the transparent layer */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the transparent layer */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    color: #ffffff; /* White text for hero title */
+    margin-bottom: 20px;
+}
+
+.hero-section .tagline {
+    font-size: 1.8em;
+    color: #ffffff; /* White text for tagline */
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-button {
+    background-color: #FF8C00; /* Dark orange */
+    color: #EEEEEE;
+}
+
+.primary-button:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #333333; /* Dark background */
+    color: #ffffff;
+    padding: 50px 0 20px;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #00FF00; /* Green heading */
+}
+
+.footer-col p, .footer-col ul li a {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(330deg);
+}
+
+.youtube-link {
+    color: #f70393;
+}
+
+.youtube-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    color: white;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #555555;
+    font-size: 0.85em;
+    color: #cccccc;
+}
+
+.copyright p {
+    margin-bottom: 0;
+}
+
+/* About Snapshot Section */
+.about-snapshot-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.stat-item {
+    background-color: #FFD700; /* Cheerful yellow */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.stat-item:hover {
+    background-color: pink;
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #555555;
+}
+
+/* Courses Offered Section */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 1s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-card:hover {
+    transform: rotate3d(1, 1, 1, 360deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-card .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.course-card .card-icon img {
+    width: 70px;
+    height: 70px;
+}
+
+.course-card .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.course-card .card-description {
+    font-size: 0.95em;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.course-card .card-button {
+    background-color: #FF5555;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .card-button:hover {
+    background-color: #800080;
+}
+
+/* Faculty Highlight Section */
+.faculty-highlight-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faculty-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00FF00;
+    background-color: #D3D3D3;
+}
+
+.faculty-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.faculty-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.faculty-title {
+    font-size: 1.1em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.faculty-experience {
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.secondary-button {
+    background-color: #FFD700;
+    color: #333333;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: orange;
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    color: #333333;
+    font-size: 0.95em;
+}
+
+/* Events & Announcements Carousel */
+.events-announcements-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.event-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.small-button {
+    background-color: #00FF00;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.small-button:hover {
+    background-color: orange;
+}
+
+/* Quick Links Section */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.quick-link-button {
+    background-color: #90EE90;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    transition: transform 0.5s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-link-button:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: pink;
+    color: purple;
+}
+
+.quick-link-button span, .quick-link-button img {
+    transition: all 0.3s ease;
+}
+
+.quick-link-button::after {
+    content: 'click here';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.quick-link-button:hover span, .quick-link-button:hover img {
+    opacity: 0;
+}
+
+.quick-link-button:hover::after {
+    opacity: 1;
+}
+
+.quick-link-button img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.quick-link-button span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Hide main nav by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Below header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+        transition: all 0.3s ease-in-out; /* Smooth transition for mobile menu */
+        z-index: 10; /* Ensure navigation is above video */
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li .nav-button {
+        margin-left: 0; /* Remove left margin for mobile button */
+        width: 80%; /* Make button wider */
+        margin: 10px auto; /* Center button */
+    }
+
+        header .menu-toggle {
+        display: block !important; /* Show toggle button on small screens */
+    }
+}
+
+
+/* Playgroup Card Styling */
+#playgroup-card {
+    background-image: url('C:\\Users\\HP\\Desktop\\kk\\new\\playgroup.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#playgroup-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#playgroup-card .card-icon,
+#playgroup-card .card-title,
+#playgroup-card .card-description,
+#playgroup-card .card-button {
+    position: relative;
+    z-index: 1;
+}
+
+.playgroup-description {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.notice-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Testimonials Carousel Styling */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide cards outside the view */
+    margin: 0 auto;
+    max-width: 800px; /* Adjust as needed */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+.carousel-track .testimonial-card {
+    min-width: 100%; /* Each card takes full width of the container */
+    box-sizing: border-box; /* Include padding in width */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px; /* Adjust as needed */
+    right: 30px; /* Position on the right side */
+    background-color: #00FF00; /* Green background */
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000; /* Ensure it's on top of other elements */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: orange;
+    transform: translateY(-3px);
+}
+
+@keyframes shake-whatsapp {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#scroll-to-top {
+    animation: shake-whatsapp 0.5s infinite alternate; /* Apply the animation */
+}
+
+/* Styles for Hero Section Buttons */
+.hero-content button {
+    background-color: #00FF00; /* Energetic green */
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px; /* Add some margin between buttons */
+}
+
+.hero-content button:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+}
+
+/* Mobile Notification Icon Container */
+.mobile-notification-icon-container {
+    display: none; /* Hidden by default for desktop */
+}
+
+@media (max-width: 768px) {
+    .mobile-notification-icon-container {
+        display: flex; /* Show in mobile view */
+        order: 2; /* Position after logo */
+        margin-left: auto; /* Push to the right */
+        align-items: center; /* Vertically align the icon */
+    }
+
+    /* Hide the original notification icon in the main navigation for mobile */
+    .main-nav ul li #notification-link {
+        display: none;
+    }
+
+    /* Ensure the menu toggle is visible and positioned correctly */
+    .menu-toggle {
+        display: block !important;
+        order: 3; /* Position after the mobile notification icon */
+    }
+
+    /* Adjust the main-nav display for mobile */
+    .main-nav {
+        display: none; /* Hide main nav by default on small screens */
+        order: 4; /* Place it after other header elements */
+        /* The rest of the main-nav mobile styles are already present */
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    /* Style the notification icon itself in mobile view */
+    .mobile-notification-icon-container .nav-button {
+        border-radius: 50%; /* Circular shape */
+        padding: 10px; /* Match vertical padding of Home button */
+        background-color: #90EE90 !important; /* Light green background */
+    }
+
+    .mobile-notification-icon-container .nav-button img {
+        width: 25px; /* Reduced size */
+        height: 25px; /* Reduced size */
+        margin-bottom: 0; /* Ensure no extra margin */
+        filter: brightness(0) saturate(100%); /* Black filter */
+        animation: shake-whatsapp 0.5s infinite alternate; /* Apply the animation */
+    }
+}
+
+#modal-image {
+    height: auto;
+    object-fit: contain;
+    /* New desktop styles */
+    width: 20%;
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure it behaves as a block element for margin auto to work */
+}
+
+@media (max-width: 768px) {
+    #modal-image {
+        width: 50%;
+        margin: 0 auto; /* Center the image */
+        display: block; /* Ensure it behaves as a block element for margin auto to work */
+    }
+}
